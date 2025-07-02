@@ -43,7 +43,7 @@ def max_drawdown(price_df):
 
 # closing price plot 
 
-def closing_price_plot(prices):
+def closing_price_plot(prices, filename="closing_prices.png"):
     plt.figure(figsize=(12, 6))
     tickers = prices.columns.tolist()
 
@@ -58,9 +58,12 @@ def closing_price_plot(prices):
 
     plt.xticks(rotation=45)
     plt.gca().xaxis.set_major_locator(plt.MaxNLocator(30))  
-
     plt.tight_layout()
-    plt.show()
+
+    plt.savefig(filename)
+    print(f"Closing price plot saved to '{filename}'")
+    plt.close() 
+
 
 # metric summary (returns, volatility, sharpe ratio, max drawdown)
 
