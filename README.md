@@ -9,6 +9,7 @@ The goal was to optimize portfolio weights for maximum Sharpe ratio and compare 
 - sqig_etf_portfolio_data.csv - Historical ETF prices
 - weights.csv - Optimized weights (Sharpe-maximizing)
 - portfolio_vs_benchmark.csv - Performance comparison
+- closing_prices.png - Price trend plot
 
 **Metrics Evaluated**
 
