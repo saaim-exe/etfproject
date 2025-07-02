@@ -158,7 +158,7 @@ def evaluate_portfolio_performance(prices):
 
 
     
-    return performance
+    return performance, daily_portfolio_returns
 
 def evaluate_equal_weight_benchmark(prices):
     benchmark_prices = prices[["ICLN", "QCLN", "ARKQ", "BOTZ", "ROBO"]]
@@ -187,6 +187,18 @@ def evaluate_equal_weight_benchmark(prices):
     }
 
     return benchmark_pf
+
+#tracking error
+
+def tracking_error(portfolio_returns, benchmark_returns):
+    difference = portfolio_returns - benchmark_returns
+    return np.std(difference) * np.sqrt(252)
+
+# alpha 
+
+def alpha(portfolio_annual_return, benchmark_annual_return):
+    return portfolio_annual_return - benchmark_annual_return
+
 
 
     

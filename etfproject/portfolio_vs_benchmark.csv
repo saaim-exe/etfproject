@@ -1,3 +1,3 @@
-,Annual Return,Annual Volatility,Sharpe Ratio,Max Drawdown
-Sharpe Max Portfolio,17.12%,21.79%,0.74,-31.50%
-Equal Wegihted Benchmark,-237.39%,611.90%,-0.39,-55.78%
+,Annual Return,Annual Volatility,Sharpe Ratio,Max Drawdown,Alpha vs Benchmark,Tracking Error
+Sharpe Max Portfolio,17.12%,21.79%,0.74,-31.50%,254.5080%,6.1096
+Equal Weighted Benchmark,-237.39%,611.90%,-0.39,-55.78%,,
