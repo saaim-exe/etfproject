@@ -27,14 +27,26 @@ sharpe_max_weights(prices)
 # evaluating performance of weighted portfolio 
 
 pf_performance = evaluate_portfolio_performance(prices)
-
-print("Our Portfolio Performance: ")
-print(pf_performance)
+#print(pf_performance)
 
 # evaluating performance of benchmarks 
 
 benchmark_performance = evaluate_equal_weight_benchmark(prices)
+#print(benchmark_performance)
 
-print ("\nEqual Weighted Benchmark Performance: ")
-print(benchmark_performance)
+performance_comparison = pd.DataFrame({
+    
+    "Sharpe Max Portfolio": pf_performance,
+    "Equal Wegihted Benchmark": benchmark_performance    
+    
+    })
+
+performance_comparison = performance_comparison.T
+
+performance_comparison.to_csv("portfolio_vs_benchmark.csv")
+
+print("\nPerformance comparison saved to 'portfolio_vs_benchmark.csv'")
+
+
+
 
